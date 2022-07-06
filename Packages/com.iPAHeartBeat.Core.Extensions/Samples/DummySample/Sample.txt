@@ -1,0 +1,1 @@
+This is sample assets to extra import with package if required.
