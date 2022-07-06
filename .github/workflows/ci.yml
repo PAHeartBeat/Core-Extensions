@@ -3,10 +3,12 @@ on:
   push:
     branches:
     - master
+environment: CI_CD
+- env:
+      NPM_TOKEN: ${{ env.CODESMITH_IO_API_KEY }}
 jobs:
   release:
     name: release
-    environment: CI_CD
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
