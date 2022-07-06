@@ -5,9 +5,9 @@ on:
     - master
 jobs:
   release:
-    name: release (force)
-    runs-on: ubuntu-latest
+    name: release
     environment: CI_CD
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
       with:
