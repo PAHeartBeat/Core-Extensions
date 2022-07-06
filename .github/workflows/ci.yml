@@ -3,6 +3,7 @@ on:
   push:
     branches:
     - master
+  workflow_dispatch
 
 env:
       NPM_TOKEN: ${{ secrets.CODESMITH_IO_API_KEY }}
