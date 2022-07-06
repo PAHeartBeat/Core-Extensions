@@ -1,11 +1,11 @@
 {
 	"name": "com.ipaheartbeat.core.extensions",
-	"version": "0.0.1-RC3",
+	"version": "1.0.0",
 	"displayName": "Core Extensions",
 	"description": "This Packages contains various extensions for c# code to use with any Project Unity Or Non-Unity.",
 	"license": "LGPL-3.0-or-later",
 	"unity": "2020.3",
-	"dependencies":{
+	"dependencies": {
 		"com.unity.nuget.newtonsoft-json": "3.0.2"
 	},
 	"keywords": [
