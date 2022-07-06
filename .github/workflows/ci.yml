@@ -3,8 +3,10 @@ on:
   push:
     branches:
     - master
-- env:
+
+env:
       NPM_TOKEN: ${{ env.CODESMITH_IO_API_KEY }}
+
 jobs:
   release:
     name: release
