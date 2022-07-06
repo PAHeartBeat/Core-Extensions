@@ -7,6 +7,7 @@ jobs:
   release:
     name: release (force)
     runs-on: ubuntu-latest
+    environment: CI_CD
     steps:
     - uses: actions/checkout@v2
       with:
