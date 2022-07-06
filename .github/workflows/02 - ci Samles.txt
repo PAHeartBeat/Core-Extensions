@@ -34,4 +34,4 @@ jobs:
         echo '### Pushing new changes to Upm Branch.'
         git push -f -u origin upm
       env:
-        PKG_ROOT: Assets/UPMAssets
+        PKG_ROOT: Packages/com.iPAHeartBeat.Core.Extensions

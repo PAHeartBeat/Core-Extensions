@@ -4,14 +4,15 @@ on:
     branches:
     - master
 jobs:
-  split-upm:
-    name: split upm branch (force)
+  release:
+    name: release (force)
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
-    - name: Release
+    - name: Semantic Release
+      id: semantic
       uses: cycjimmy/semantic-release-action@v2
       with:
         extra_plugins: |
@@ -20,7 +21,7 @@ jobs:
         branch: master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: split upm branch
+    - name: Create UPM branch
       run: |
         echo '### Removing exsiting upm branch'
         git branch -d upm &> /dev/null || echo upm branch not found
@@ -43,7 +44,7 @@ jobs:
         echo '### Pushing new changes to Upm Branch.'
         git push -f -u origin upm
       env:
-        PKG_ROOT: Assets/UPMAssets
+        PKG_ROOT: Packages/com.iPAHeartBeat.Core.Extensions
     - name: Create upm git tag
       if: steps.semantic.outputs.new_release_published == 'true'
       run: |
