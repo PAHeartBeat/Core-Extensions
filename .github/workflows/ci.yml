@@ -5,7 +5,7 @@ on:
     - master
 
 env:
-      NPM_TOKEN: ${{ env.CODESMITH_IO_API_KEY }}
+      NPM_TOKEN: ${{ secrets.CODESMITH_IO_API_KEY }}
 
 jobs:
   release:
