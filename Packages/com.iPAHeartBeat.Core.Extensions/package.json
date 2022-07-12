@@ -1,29 +1,30 @@
 {
-	"name": "com.ipaheartbeat.core.extensions",
-	"version": "1.0.0",
-	"displayName": "Core Extensions",
-	"description": "This Packages contains various extensions for c# code to use with any Project Unity Or Non-Unity.",
-	"license": "LGPL-3.0-or-later",
-	"unity": "2020.3",
-	"dependencies": {
-		"com.unity.nuget.newtonsoft-json": "3.0.2"
-	},
-	"keywords": [
-		"Core",
-		"Extensions",
-		"Unity",
-		"iPAHeartBeat",
-		"publc"
-	],
-	"author": {
-		"name": "Ankur Ranpariya",
-		"email": "ankur30884@gmail.com"
-	},
-	"samples": [
-		{
-			"displayName": "Dummy Samples",
-			"description": "This sample does not contain any thing. It's just empty directoy",
-			"path": "Samples~/DummySample"
-		}
-	]
+  "name": "com.ipaheartbeat.core.extensions",
+  "version": "1.0.0-preview.4",
+  "displayName": "Core Extensions",
+  "description": "This Packages contains various extensions for c# code to use with any Project Unity Or Non-Unity.",
+  "license": "LGPL-3.0-or-later",
+  "unity": "2020.3",
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.0.2"
+  },
+  "keywords": [
+    "Core",
+    "Extensions",
+    "Unity",
+    "iPAHeartBeat",
+    "publc"
+  ],
+  "author": {
+    "name": "Ankur Ranpariya",
+    "email": "ankur30884@gmail.com"
+  },
+  "samples": [
+    {
+      "displayName": "Dummy Samples",
+      "description": "This sample does not contain any thing. It's just empty directoy",
+      "path": "Samples~/DummySample"
+    }
+  ],
+  "type": "library"
 }
