@@ -2,7 +2,7 @@
   "name": "com.ipaheartbeat.core.extensions",
   "version": "1.0.0-preview.4",
   "displayName": "Core Extensions",
-  "description": "This Packages contains various extensions for c# code to use with any Project Unity Or Non-Unity.",
+  "description": "This Packages contains various extensions for c# code to use with any Project Unity Or Non-Unity.\neg. \nString extension\nList Extensions\nObject Extensions\nDatetime Extensions",
   "license": "LGPL-3.0-or-later",
   "unity": "2020.3",
   "dependencies": {
