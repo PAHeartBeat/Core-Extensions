@@ -86,5 +86,20 @@ namespace iPAHeartBeat.Core.Extensions {
 				.Select(int.Parse)
 				.ToList();
 		}
+
+		/// <summary>
+		/// The helper method to replace multiple text with one text.
+		/// </summary>
+		/// <param name="mainText">Text in which replace should perform.</param>
+		/// <param name="newValue">The New text which need to be change instead-of old text(s,</param>
+		/// <param name="args">The list of possible old text which need to replace with new text.</param>
+		/// <returns></returns>
+		public static string ReplaceText(this string mainText, string newValue, params string[] args) {
+			foreach (var item in args) {
+				mainText = mainText.Replace(item, newValue);
+			}
+
+			return mainText;
+		}
 	}
 }
