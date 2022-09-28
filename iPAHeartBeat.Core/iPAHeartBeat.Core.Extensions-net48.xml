@@ -339,7 +339,7 @@
             <param name="mainText">Text in which replace should perform.</param>
             <param name="newValue">The New text which need to be change instead-of old text(s).</param>
             <param name="args">The list of possible old text which need to replace with new text.</param>
-            <returns>The Updated Text where all values from <paramref name="args"/> is replaced with <paramref name="newValue"/>.</returns>
+            <returns>The Updated Text where all values from <paramref name="args"/>is replaced with <paramref name="newValue"/>.</returns>
         </member>
         <member name="T:iPAHeartBeat.Core.Extensions.TimeMode">
             <summary>
