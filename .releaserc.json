@@ -8,14 +8,14 @@
 			"@semantic-release/npm",
 			{
 				"npmPublish": false,
-				"pkgRoot": "Packages/com.iPAHeartBeat.Core.Extensions"
+				"pkgRoot": "Unity/Packages/com.iPAHeartBeat.Core.Extensions"
 			}
 		],
 		[
 			"@semantic-release/git",
 			{
 				"assets": [
-					"Packages/com.iPAHeartBeat.Core.Extensions/package.json",
+					"Unity/Packages/com.iPAHeartBeat.Core.Extensions/package.json",
 					"CHANGELOG.md"
 				],
 				"message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
