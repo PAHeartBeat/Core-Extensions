@@ -1,12 +1,12 @@
 {
 	"name": "com.ipaheartbeat.core.extensions",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"displayName": "Core Extensions",
-	"description": "This Packages contains various extensions for c# code to use with any Project Unity Or Non-Unity.\neg. \nString extension\nList Extensions\nObject Extensions\nDate-time Extensions",
+	"description": "This Packages contains various extensions for c# code to use with any Project Unity Or Non-Unity.\nUses NewtonSoft Json v13.0.1 Package for json related operation. Which is compatible with unity package \"com.unity.nuget.newtonsoft-json\" with version 3.0.1 or higher",
 	"license": "LGPL-3.0-or-later",
-	"unity": "2020.3",
+	"unity": "2017.1",
 	"dependencies": {
-		"com.unity.nuget.newtonsoft-json": ">=3.0.0"
+		"com.unity.nuget.newtonsoft-json": "3.0.1"
 	},
 	"keywords": [
 		"Core",
@@ -23,8 +23,16 @@
 		{
 			"displayName": "Dummy Samples",
 			"description": "This sample does not contain any thing. It's just empty directory",
-			"path": "Samples~/DummySample"
+			"path": "Samples/DummySample"
 		}
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/PAHeartBeat/iPAHearbeat-Core-Extensions"
+	},
+	"bugs": {
+		"url": "https://github.com/PAHeartBeat/iPAHearbeat-Core-Extensions/issues",
+		"email": "ankur30884@gmail.com"
+	},
 	"type": "library"
 }
