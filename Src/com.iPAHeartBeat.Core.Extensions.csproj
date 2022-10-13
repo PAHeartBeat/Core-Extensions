@@ -2,19 +2,51 @@
   <PropertyGroup>
     <TargetFrameworks>net48;net5.0;net6.0</TargetFrameworks>
     <LangVersion>10</LangVersion>
-    <IsPackable>true</IsPackable>
     <OutputType>library</OutputType>
-    <PublishReadyToRun>true</PublishReadyToRun>
+  </PropertyGroup>
 
+  <PropertyGroup Label="Analyzer Setting">
+    <AnalysisLevel>latest</AnalysisLevel>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
 
-    <Product>C# Extenstion for Unity using .Net Framework 4.8</Product>
+  <PropertyGroup Label="ReadyToRun Settings">
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <PublishReadyToRunEmitSymbols>true</PublishReadyToRunEmitSymbols>
+    <PublishReadyToRunComposite Condition="'$(SelfContained)' == true">true</PublishReadyToRunComposite>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Trimming Setting" Condition="'$(SelfContained)' == 'true'">
+    <PublishTrimmed>true</PublishTrimmed>
+    <IsTrimmable>true</IsTrimmable>
+    <TrimMode>link</TrimMode> <!-- copyused, link-->
+  </PropertyGroup>
+
+  <PropertyGroup Label="NuGet Pacakge Settings">
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Debug and Exception Setting">
+    <DefineConstants>$(DefineConstants)</DefineConstants>
+    <Optimize>true</Optimize>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <IncludeSymbols>true</IncludeSymbols>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Author and Copyright">
     <Authors>Ankur Ranpariya</Authors>
     <Company>N/A</Company>
-    <Copyright>2021</Copyright>
+    <Copyright>@2021</Copyright>
+  </PropertyGroup>
 
+  <PropertyGroup Label="Project Meta and settings.">
+    <Product>C# Extenstion for Unity using .Net Framework 4.8</Product>
     <PackageId>iPAHeartBeat.Core.Extensions</PackageId>
     <PackageTags>C#, NewtonSoft Json</PackageTags>
 
@@ -25,20 +57,13 @@
     <NeutralLanguage>en</NeutralLanguage>
 
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <AnalysisLevel>latest</AnalysisLevel>
     <DocumentationFile>$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
 
+  <PropertyGroup Label="Project Git Info">
     <PackageProjectUrl/>
     <RepositoryUrl/>
     <RepositoryType>git</RepositoryType>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <Optimize>true</Optimize>
-    <DefineConstants>$(DefineConstants)</DefineConstants>
-    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
-    <AutoGenerateBindingRedirects>False</AutoGenerateBindingRedirects>
-    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'"/>
