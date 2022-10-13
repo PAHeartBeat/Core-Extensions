@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/PAHeartBeat/iPAHearbeat-Core-Extensions/compare/v1.0.0...v1.0.1) (2022-10-13)
+
+
+### Bug Fixes
+
+* Branch name in git tag fix ([7f625f6](https://github.com/PAHeartBeat/iPAHearbeat-Core-Extensions/commit/7f625f68e37b7d41ef6357c9753d3aecc86939d9))
+
 # 1.0.0 (2022-10-13)
 
 
