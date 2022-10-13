@@ -36,17 +36,17 @@ public static class TimeSpanExtensions {
 		string format;
 		format = mode switch {
 			TimeMode.Minimal => span.TotalDays.CheckAndReturnFormatOrRecheck(
-				"{0:d}D {0:h}H",
-				() => span.TotalHours.CheckReturnAnyFormat("{0:h}H:{0:m}M", "{0:m}M:{0:s}S")),
+				"{0:%d}D {0:%h}H",
+				() => span.TotalHours.CheckReturnAnyFormat("{0:%h}H:{0:%m}M", "{0:%m}M:{0:%s}S")),
 			TimeMode.Compact => span.TotalDays.CheckAndReturnFormatOrRecheck(
 				"{0:dd}D {0:hh}H",
 				() => span.TotalHours.CheckReturnAnyFormat("{0:hh}H:{0:mm}M", "{0:mm}M:{0:ss}S")),
 			TimeMode.Full => span.TotalDays.CheckAndReturnFormatOrRecheck(
 				"{0:dd} Day {0:hh} Hour {0:mm} Min {0:ss} Sec",
-				() => span.TotalHours.CheckReturnAnyFormat("{00:hh} Hour {00:mm} Min {00:ss} Sec", "{00:mm} Min {00:ss} Sec")),
+				() => span.TotalHours.CheckReturnAnyFormat("{0:hh} Hour {0:mm} Min {0:ss} Sec", "{0:mm} Min {0:ss} Sec")),
 			_ => span.TotalDays.CheckAndReturnFormatOrRecheck(
-				"{0:d}D {0:h}:{0:m}:{0:s}",
-				() => span.TotalHours.CheckReturnAnyFormat("{0:h}:{0:m}:{0:s}", "{0:m}:{0:s}")),
+				"{0:dd\\.hh\\:mm\\:ss}",
+				() => span.TotalHours.CheckReturnAnyFormat("{0:hh\\:mm\\:ss}", "{0:mm\\:ss}")),
 		};
 
 		retValue = string.Format(format, span);
