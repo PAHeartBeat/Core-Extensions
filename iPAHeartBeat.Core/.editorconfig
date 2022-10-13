@@ -410,21 +410,9 @@ csharp_preserve_single_line_statements = true
 # Severtiy option
 # none, silent, suggestion, warning, error
 
-# SA1027: Use tabs correctly
-# Justification: Code Style and auto format is setup to use tab only to aovid extra character.
-dotnet_diagnostic.SA1027.severity = silent
-
-# SA1200: Using directives should be placed correctly
-# Justification:
-dotnet_diagnostic.SA1200.severity = silent
-
-# SA1500: Braces for multi-line statements should not share line
-# Justification: Breace policy Configured to share same bracing for other backend laguague like JavaScript, Node.Js
-dotnet_diagnostic.SA1500.severity = silent
-
-# SA1310: Field names should not contain underscore
-# Justification: Nameing Conevention for Constant is created for to use All Upper Case with Underscore as word sepertor to identify Const by it's name.
-dotnet_diagnostic.SA1310.severity = silent
+# S3903: Move elememtn to named/blocked namespace
+# Justification: it's know issue for file scopped namespace in C# 10
+dotnet_diagnostic.S3903.severity = silent
 
 # SA1124: Do not use regions
 # Justification: We will be using regions to group code or constnat based on uses.
@@ -438,6 +426,22 @@ dotnet_diagnostic.SA1309.severity = silent
 # Justification: Nameing Conevention for Constant is created for to use All Upper Case with Underscore as word sepertor to identify Const by it's name.
 dotnet_diagnostic.CA1707.severity = silent
 
+# SA1027: Use tabs correctly
+# Justification: Code Style and auto format is setup to use tab only to aovid extra character.
+dotnet_diagnostic.SA1027.severity = silent
+
+# SA1500: Braces for multi-line statements should not share line
+# Justification: Breace policy Configured to share same bracing for other backend laguague like JavaScript, Node.Js
+dotnet_diagnostic.SA1500.severity = silent
+
+# SA1200: Using directives should be placed correctly
+# Justification:
+# dotnet_diagnostic.SA1200.severity = silent
+
+# SA1310: Field names should not contain underscore
+# Justification: Nameing Conevention for Constant is created for to use All Upper Case with Underscore as word sepertor to identify Const by it's name.
+# dotnet_diagnostic.SA1310.severity = silent
+
 # SA1307: Accessible fields should begin with upper-case letter
 # Justification:
 # dotnet_diagnostic.SA1307.severity = silent
@@ -448,11 +452,11 @@ dotnet_diagnostic.CA1707.severity = silent
 
 # S1104: Fields should not have public accessibility
 # Justification: we are using filed variable for input and out data structure for services.
-dotnet_diagnostic.S1104.severity = silent
+# dotnet_diagnostic.S1104.severity = silent
 
 # S2328: "GetHashCode" should not reference mutable fields
 # Justification: we are want to use the string data as id to identiy unique object via hashCode.
-dotnet_diagnostic.S2328.severity = silent
+# dotnet_diagnostic.S2328.severity = silent
 
 [*.vb]
 ##################################################################

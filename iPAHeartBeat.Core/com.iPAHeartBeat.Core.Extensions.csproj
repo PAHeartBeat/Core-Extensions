@@ -18,8 +18,8 @@
     <PackageId>iPAHeartBeat.Core.Extensions</PackageId>
     <PackageTags>C#, NewtonSoft Json</PackageTags>
 
-    <RootNamespace>$(PackageId)</RootNamespace>
-    <AssemblyName>$(RootNamespace)-$(TargetFramework)</AssemblyName>
+    <RootNamespace>iPAHeartBeat.Core</RootNamespace>
+    <AssemblyName>$(PackageId)-$(TargetFramework)</AssemblyName>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
     <FileVersion>1.0.1.0</FileVersion>
     <NeutralLanguage>en</NeutralLanguage>
