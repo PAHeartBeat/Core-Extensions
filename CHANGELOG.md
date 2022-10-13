@@ -1,3 +1,11 @@
+# 1.0.0 (2022-10-13)
+
+
+### Features
+
+* Added extension ([5227c02](https://github.com/PAHeartBeat/iPAHearbeat-Core-Extensions/commit/5227c025a1daea38edca694e2d6c4b03817841cb))
+* No New Feature ([a7fd3f5](https://github.com/PAHeartBeat/iPAHearbeat-Core-Extensions/commit/a7fd3f58018b02221b674425fac0b87e64652b32))
+
 # 1.0.2 (2022-10-13)
 ## Bug fix
 * String format issue fixed for Ticking Time in TimeSpan Extensions.
