@@ -33,14 +33,14 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Create UPM branch
       run: |
-        # echo '### Removing existing upm branch for the version'
-        # git branch -d $UPM_BRANCH &> /dev/null || echo upm branch not found
+        echo '### Removing existing upm branch for the version'
+        git branch -d $UPM_BRANCH &> /dev/null || echo upm branch not found
 
         echo '### Split upm branch'
         git subtree split -P "$PKG_ROOT" -b $UPM_BRANCH
 
-        echo '### checkout to upm to manage Samples and other'
-        git checkout upm
+        echo '### checkout to $UPM_BRANCH to manage Samples and other'
+        git checkout $UPM_BRANCH
 
         echo '### Managing Sample Folder for Unity'
         if [[-d "Samples"]]; then
