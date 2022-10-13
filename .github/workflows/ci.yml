@@ -55,8 +55,7 @@ jobs:
         git push -f -u origin $UPM_BRANCH
       env:
         PKG_ROOT: Unity/Packages/com.iPAHeartBeat.Core.Extensions
-        VERSION: v${{ steps.semantic.outputs.new_release_version }}
-        UPM_BRANCH: upm/v${{ VERSION }}
+        UPM_BRANCH: upm/v${{ steps.semantic.outputs.new_release_version }}
     - name: Create upm git tag
       if: steps.semantic.outputs.new_release_published == 'true'
       run: |
