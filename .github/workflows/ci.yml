@@ -46,7 +46,7 @@ jobs:
         git checkout $UPM_BRANCH
 
         echo '### Managing Sample Folder for Unity'
-        if [[-d "Samples"]]; then
+        if [[ -d "Samples" ]]; then
           git mv Samples Samples~
           rm -f Samples.meta
           git config --global user.name 'github-bot'
