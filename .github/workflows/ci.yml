@@ -54,7 +54,7 @@ jobs:
         echo '### Pushing new changes to Upm Branch.'
         git push -f -u origin $UPM_BRANCH
       env:
-        PKG_ROOT: Packages/com.iPAHeartBeat.Core.Extensions
+        PKG_ROOT: Unity/Packages/com.iPAHeartBeat.Core.Extensions
         VERSION: v${{ steps.semantic.outputs.new_release_version }}
         UPM_BRANCH: upm/$VERSION
     - name: Create upm git tag
