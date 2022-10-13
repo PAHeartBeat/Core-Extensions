@@ -1,3 +1,13 @@
+# 1.0.2 (2022-10-13)
+## Bug fix
+* String format issue fixed for Ticking Time in TimeSpan Extensions.
+
+## Other changes
+* Folder structure changes for Main Project and Unity Package project
+* Unity Package detail updated
+  * Minimum Unity version changed to 2017.1
+  * Description updated for Newton Soft Json Dependency.
+
 # 1.0.1 (2022-09-27)
 
 ## Minor Changes
