@@ -1,0 +1,413 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iPAHeartBeat.Core.Extensions-net5.0</name>
+    </assembly>
+    <members>
+        <member name="T:iPAHeartBeat.Core.Extensions.DateTimeExtensions">
+            <summary>
+            Date Time extension to work and avoid date time format is different platform or different localization.
+            </summary>
+        </member>
+        <member name="P:iPAHeartBeat.Core.Extensions.DateTimeExtensions.DateTimeFormat">
+            <summary>
+            Gets this will return which date time format will be used to convert string to date time and vice-versa.
+            </summary>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.DateTimeExtensions.SetTimeFormat(System.String)">
+            <summary>
+            Method will update default date-time format, please refer Microsoft C# document to create custom date-time format.
+            </summary>
+            <param name="format">date-time format string to update default date-time format.</param>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.DateTimeExtensions.ConvertDateTime(System.String)">
+            <summary>
+            Method will help to convert date-time string to actual date time object.
+            </summary>
+            <param name="dateTimeString">Formatted date-time string. check format <see cref="P:iPAHeartBeat.Core.Extensions.DateTimeExtensions.DateTimeFormat"/>.</param>
+            <returns>date-time object from formatted string.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.DateTimeExtensions.ConvertDateTime(System.DateTime)">
+            <summary>
+            Method will help to convert date-time value to string.
+            </summary>
+            <param name="dateTime">dateTime object value.</param>
+            <returns>formatted string from date-time object. Check format <see cref="P:iPAHeartBeat.Core.Extensions.DateTimeExtensions.DateTimeFormat"/>.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.DateTimeExtensions.ConvertMinutesToTimeSpan(System.Int32)">
+            <summary>
+            Method will convert numeric value as minute to C# Time-span.
+            </summary>
+            <param name="duration">duration count in minutes.</param>
+            <returns>Instance of Time-span created with minutes values.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.DateTimeExtensions.GetEpochTime(System.DateTime)">
+            <summary>
+            Will convert C# date-time value to Unix Epoch timestamp.
+            </summary>
+            <param name="date">Date which you need to convert in UTC format.</param>
+            <returns>return total seconds as unix time format.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.DateTimeExtensions.GetDateFromEpoch(System.Int64)">
+            <summary>
+            will convert Unix Styled seconds based epoch time value to C# date-time object.
+            </summary>
+            <param name="unixEpochSeconds">epoch time value in seconds.</param>
+            <returns>return C# date-time object.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.DateTimeExtensions.GetUnixEpochTime(System.DateTime)">
+            <summary>
+            Will convert C# date-time value to Unix Epoch timestamp.
+            </summary>
+            <param name="date">Date which you need to convert in UTC format.</param>
+            <returns>return total seconds as unix time format.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.DateTimeExtensions.GetDateFromUnixEpochTimeStamp(System.Int64)">
+            <summary>
+            will convert Unix Styled seconds based epoch time value to C# date-time object.
+            </summary>
+            <param name="unixEpochSeconds">epoch time value in seconds.</param>
+            <returns>return C# date-time object.</returns>
+        </member>
+        <member name="T:iPAHeartBeat.Core.Extensions.EnumExtensions">
+            <summary>
+            Extension methods for Enums.
+            </summary>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.EnumExtensions.ParseEnumValue``1(System.String)">
+            <summary>
+            Will Prase string value as Enum value to defined enum type.
+            </summary>
+            <typeparam name="T">Enum type for which in will be parse.</typeparam>
+            <param name="enumStringValue">string value to convert enum value.</param>
+            <returns>enum value of the string.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.EnumExtensions.GetEnumNames``1(``0)">
+            <summary>
+            Helper method to retrieve all enum value names.
+            </summary>
+            <typeparam name="T">manged Enum type.</typeparam>
+            <param name="type">The enum as type.</param>
+            <returns>Collection of the string from Enum value names.</returns>
+        </member>
+        <member name="T:iPAHeartBeat.Core.Extensions.JsonExtensions">
+            <summary>
+            Extension class to work with json in Unity. this will use Unity Json Utility and MiniJson from Calvin Rain.
+            </summary>
+        </member>
+        <member name="P:iPAHeartBeat.Core.Extensions.JsonExtensions.Settings">
+            <summary>
+            Gets readonly Newton soft Json Serializer settings. To Update setting please use <see cref="M:iPAHeartBeat.Core.Extensions.JsonExtensions.SetSerializerSettings(Newtonsoft.Json.JsonSerializerSettings)"/>.
+            </summary>
+        </member>
+        <member name="P:iPAHeartBeat.Core.Extensions.JsonExtensions.FormattingOption">
+            <summary>
+            Gets readonly Json Serializer formatting option.
+            </summary>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.JsonExtensions.SetSerializerSettings(Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Will update Newton Soft Json Serializer Setting to serialize and deserialize JSon data.
+            <br/> NOTE: Please use same setting or default setting in whole game to avoid any kind of mismatch.
+            </summary>
+            <param name="settings">The Serialization setting option to set for NewtonSoft Json.</param>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.JsonExtensions.ToJson(System.Object)">
+            <summary>
+            Will Serialized object as JSon string using Unity Json Utility with pretty format.
+            </summary>
+            <param name="obj">object to serialized.</param>
+            <returns>serialized JSon string.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.JsonExtensions.ToJson(System.Object,Newtonsoft.Json.Formatting)">
+            <summary>
+            Will Serialized object as JSon string using Unity Json Utility with pretty format.
+            </summary>
+            <param name="obj">object to serialized.</param>
+            <param name="formatting">Serializer formatting option like convert Object to JSON string with indentation or without indent like minified JSON string.</param>
+            <returns>serialized JSon string.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.JsonExtensions.FromJson``1(System.String)">
+            <summary>
+            will Deserialize json string to Dictionary.
+            </summary>
+            <typeparam name="T">Managed Type to which Json data needs to convert.</typeparam>
+            <param name="jsonData">string to deserialize.</param>
+            <returns>Dict data from serialized json string.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.JsonExtensions.ConvertTo``1(System.Object)">
+            <summary>
+            The helper method to Convert Object from one type to another type using json serialization.
+            </summary>
+            <typeparam name="T">Managed Type to which Input data needs to convert.</typeparam>
+            <param name="obj">The object which needs to Convert.</param>
+            <returns>instance of <typeparamref name="T"/> with data in it.</returns>
+            <exception cref="T:System.InvalidCastException">This method will throw exception if input object is primitive data type like <see cref="T:System.String"/>, <see cref="T:System.Int32"/>. etc...</exception>
+        </member>
+        <member name="T:iPAHeartBeat.Core.Extensions.KeyValuePairExtensions">
+            <summary>
+            Common Operation form Key-value pair object like Dictionary or IDictionary.
+            </summary>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.KeyValuePairExtensions.Merge``2(System.Collections.Generic.Dictionary{``0,``1},System.Collections.Generic.Dictionary{``0,``1})">
+            <summary>
+            Will merge a dictatory to another one.
+            </summary>
+            <typeparam name="TKey">Type of the Key in Dictionary.</typeparam>
+            <typeparam name="TValue">Type of the value in Dictionary.</typeparam>
+            <param name="target">Target dictionary in which data from source dictionary will be merged.</param>
+            <param name="source">Source dictionary of which data should be merged with target one.</param>
+            <returns>Updated Dictionary.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.KeyValuePairExtensions.Merge``2(System.Collections.Generic.Dictionary{``0,``1},System.Collections.Generic.Dictionary{``0,``1},System.Boolean)">
+            <summary>
+            Will merge a dictatory to another one.
+            </summary>
+            <typeparam name="TKey">Type of the Key in Dictionary.</typeparam>
+            <typeparam name="TValue">Type of the value in Dictionary.</typeparam>
+            <param name="target">Target dictionary in which data from source dictionary will be merged.</param>
+            <param name="source">Source dictionary of which data should be merged with target one.</param>
+            <param name="removeIsSourceHasNotValue">Should remove data from source dictionary which are not in other dictionary.</param>
+            <returns>Updated Dictionary.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.KeyValuePairExtensions.Copy``2(System.Collections.Generic.Dictionary{``0,``1},System.Collections.Generic.Dictionary{``0,``1})">
+            <summary>
+            Will to Value copy to avoid reference link with two dictionary.
+            </summary>
+            <typeparam name="TKey">Type of the Key in Dictionary.</typeparam>
+            <typeparam name="TValue">Type of the value in Dictionary.</typeparam>
+            <param name="target">Target dictionary in which data from source dictionary will be copied.</param>
+            <param name="source">Source dictionary of which data should be copied.</param>
+            <returns>Updated Dictionary.</returns>
+        </member>
+        <member name="T:iPAHeartBeat.Core.Extensions.ListArrayExtensions">
+            <summary>
+            Extension utilities to work with List and Array.
+            </summary>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.ListArrayExtensions.Push``1(System.Collections.Generic.List{``0},``0)">
+            <summary>
+            Will push a item to the top of the list.
+            </summary>
+            <typeparam name="T">Type of the data which are being pushed in to typed list.</typeparam>
+            <param name="list">List in which item should be added.</param>
+            <param name="item">item object which should be added at top in the list.</param>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.ListArrayExtensions.Pull``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Will take first item form the list and than remove it from list.
+            </summary>
+            <typeparam name="T">Type of the data which being pulled from the.</typeparam>
+            <param name="list">List object from which need to pull first item.</param>
+            <returns>return the first item of the list.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.ListArrayExtensions.Copy``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{``0})">
+            <summary>
+            Will copy a list to a new/another list to avoid address reference where two different list variable will referencing a same list from memory.
+            </summary>
+            <typeparam name="T">Type of the List items.</typeparam>
+            <param name="target">Target list where data will be copied from source List.</param>
+            <param name="source">Source list from where data will be copied.</param>
+            <returns>New Copy of the list which reference to diffident memory address.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.ListArrayExtensions.Merge``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{``0})">
+            <summary>
+            Will merge a list to a new/another list to avoid duplicate code.
+            </summary>
+            <typeparam name="T">Type of the List items.</typeparam>
+            <param name="target">Target list where data will be merged from source List.</param>
+            <param name="source">Source list from where data will be merged.</param>
+            <returns>updated target list which contain items from both of the list.</returns>
+        </member>
+        <member name="T:iPAHeartBeat.Core.Extensions.ObjectExtension">
+            <summary>
+            Extension methods for object type data.
+            </summary>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.ObjectExtension.IsNull(System.Object)">
+            <summary>
+            This method Will check object is null or not.
+            </summary>
+            <param name="obj">The Object which needs to be check for Null value.</param>
+            <returns>true if object is null, otherwise false.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.ObjectExtension.IsNotNull(System.Object)">
+            <summary>
+            This method Will check object has value or not.
+            </summary>
+            <param name="obj">The instance or object which needs to check for not null value.</param>
+            <returns>true if object is not null, otherwise false.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.ObjectExtension.IsPrimitiveType(System.Object)">
+            <summary>
+            This method will check object type is primitive type like string, bool, int, long, etc...
+            </summary>
+            <param name="obj">The object or instance which needs to be check about it's primitive value or not?.</param>
+            <returns>true if object type is primitive, otherwise false.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.ObjectExtension.IsNumber(System.Object)">
+            <summary>
+            This method will check for object type is any kind on number or not.
+            </summary>
+            <param name="obj">The object or instance which needs check where it's any kind of numeric data or not?.</param>
+            <returns>return true if object is any kind of number, otherwise false.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.ObjectExtension.IsKVPObject(System.Object)">
+            <summary>
+            This method will check is object is collection of KeyValePair like dictionary or HashTable.
+            </summary>
+            <param name="obj">The data or instance which need to check whether it's any kind of KVP like Hashtable, or Dictionary or not?.</param>
+            <returns>true if matches otherwise false.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.ObjectExtension.IsA``1(System.Object)">
+            <summary>
+            This Extension method will check object type is match with a specific data type or not.
+            </summary>
+            <typeparam name="T">Data type to check <paramref name="obj"/> type is the same or not?.</typeparam>
+            <param name="obj">The object or instance that need to check with particular type.</param>
+            <returns>true if type match with <typeparamref name="T"/> otherwise false.</returns>
+        </member>
+        <member name="T:iPAHeartBeat.Core.Extensions.StringExtension">
+            <summary>
+            Extension methods for string type data.
+            </summary>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.StringExtension.IsNullOrEmpty(System.String)">
+            <summary>
+            This method will check is string is empty or null.
+            </summary>
+            <param name="checkString">The string which needs to be check for Null or Empty value.</param>
+            <returns>true if string empty or null otherwise false.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.StringExtension.HasValue(System.String)">
+            <summary>
+            Check is has any-kind of data.
+            </summary>
+            <param name="checkString">The string which needs to be check for has any value or not?.</param>
+            <returns>true if string has any data otherwise false.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.StringExtension.IsNull(System.String)">
+            <summary>
+            This method is similar to <see cref="M:iPAHeartBeat.Core.Extensions.StringExtension.IsNullOrEmpty(System.String)"/>.
+            </summary>
+            <param name="obj">The string which needs to be check for Null or Empty value.</param>
+            <returns>true if string empty or null otherwise false.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.StringExtension.IsNotNull(System.String)">
+            <summary>
+            This method is similar to <see cref="M:iPAHeartBeat.Core.Extensions.StringExtension.HasValue(System.String)"/>.
+            </summary>
+            <param name="obj">The string which needs to be check for has any value or not?.</param>
+            <returns>true if string has any data otherwise false.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.StringExtension.Left(System.String,System.Int32)">
+            <summary>
+            Helper method to get first few character from the specified collection of the characters.
+            </summary>
+            <param name="obj">the actual string form which need to first few character.</param>
+            <param name="count">The count of the left most character needs to get.</param>
+            <returns>The string with left most N characters from main input string.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.StringExtension.Right(System.String,System.Int32)">
+            <summary>
+            Helper method to get last few character from the specified collection of the characters.
+            </summary>
+            <param name="obj">the actual string form which need to get last few character.</param>
+            <param name="count">The count of the last most character needs to get.</param>
+            <returns>The string with last most N characters from main input string.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.StringExtension.SplitItemToList(System.String,System.Char)">
+            <summary>
+            this method will split string and convert to list and remove empty items.
+            </summary>
+            <param name="data">data string to split.</param>
+            <param name="separator">separator to split text.</param>
+            <returns>Collection of string created form main data.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.StringExtension.SplitItemToIntList(System.String,System.Char)">
+            <summary>
+            This method will split string and convert all possible int value to create collection of int.
+            </summary>
+            <param name="data">data string to split.</param>
+            <param name="separator">separator to split text.</param>
+            <returns>Collection of integer data created form main data.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.StringExtension.ReplaceText(System.String,System.String,System.String[])">
+            <summary>
+            The helper method to replace multiple text with one text.
+            </summary>
+            <param name="mainText">Text in which replace should perform.</param>
+            <param name="newValue">The New text which need to be change instead-of old text(s).</param>
+            <param name="args">The list of possible old text which need to replace with new text.</param>
+            <returns>The Updated Text where all values from <paramref name="args"/>is replaced with <paramref name="newValue"/>.</returns>
+        </member>
+        <member name="T:iPAHeartBeat.Core.Extensions.TimeMode">
+            <summary>
+            Time Mode Enum for get different format style for time ticker.
+            </summary>
+        </member>
+        <member name="F:iPAHeartBeat.Core.Extensions.TimeMode.Countdown">
+            <summary>
+            This option will provide format like...
+            10D 2:10:22 or 23:5:10 or 10:5.
+            </summary>
+        </member>
+        <member name="F:iPAHeartBeat.Core.Extensions.TimeMode.Minimal">
+            <summary>
+            This option will provide format like...
+            10D 2H or 23H 5M or 10M 5S.
+            </summary>
+        </member>
+        <member name="F:iPAHeartBeat.Core.Extensions.TimeMode.Compact">
+            <summary>
+            This option will provide format like...
+            09D 05H or 23H:05M or 10M:05S.
+            </summary>
+        </member>
+        <member name="F:iPAHeartBeat.Core.Extensions.TimeMode.Full">
+            <summary>
+            This option will provide format like...
+            10 Day 03 Hour 05 Min 20 Sec or 12 Hour 25 Min 00 Sec or 05 Min 00 Sec.
+            </summary>
+        </member>
+        <member name="T:iPAHeartBeat.Core.Extensions.TimeSpanExtensions">
+            <summary>
+            Time Span extension to get readable time remain time.
+            </summary>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.TimeSpanExtensions.GetTickingTime(System.TimeSpan)">
+            <summary>
+            Helper method to get Timer Text from TimeSpan.
+            </summary>
+            <param name="span">Time-span value which will be used for getting ticker time.</param>
+            <returns>Ticking time Text in minimal format.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.TimeSpanExtensions.GetTickingTime(System.TimeSpan,iPAHeartBeat.Core.Extensions.TimeMode)">
+            <summary>
+            Helper method to get Timer Text from TimeSpan.
+            </summary>
+            <param name="span">Time-span value which will be used for getting ticker time.</param>
+            <param name="mode">The Display mode format.</param>
+            <returns>Ticking time Text in minimal format.</returns>
+            <exception cref="T:System.ArgumentNullException">Exception will thrown if time-span value is not provided.</exception>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.TimeSpanExtensions.CheckReturnAnyFormat(System.Double,System.String,System.String)">
+            <summary>
+            local helper method to choose based on value.
+            </summary>
+            <param name="value">the value which need to check with Constant value 1 to first or second value.</param>
+            <param name="formatOnTrue">Format text when value is Bigger than the 1.</param>
+            <param name="formatOnFalse">Format text when value is smaller than the 1.</param>
+            <returns>return either  <paramref name="formatOnTrue"/> or <paramref name="formatOnFalse"/> value based on check.</returns>
+        </member>
+        <member name="M:iPAHeartBeat.Core.Extensions.TimeSpanExtensions.CheckAndReturnFormatOrRecheck(System.Double,System.String,System.Func{System.String})">
+            <summary>
+            local helper method to choose based on value.
+            </summary>
+            <param name="value">the value which need to check with Constant value 1 to first or second value.</param>
+            <param name="formatOnTrue">Format text when value is Bigger than the 1.</param>
+            <param name="recheckActiOnOnFalse">The delegate or action which get recheck value with other helper method.</param>
+            <returns>return either format <paramref name="formatOnTrue"/> or format from recheck condition.</returns>
+        </member>
+    </members>
+</doc>

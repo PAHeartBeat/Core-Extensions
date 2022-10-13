@@ -3,7 +3,7 @@ on:
   push:
     branches:
     - master
-    
+
   workflow_dispatch:
     branches:
     - master
@@ -23,7 +23,7 @@ jobs:
         fetch-depth: 0
     - name: Semantic Release
       id: semantic
-      uses: cycjimmy/semantic-release-action@v2
+      uses: cycjimmy/semantic-release-action@v3
       with:
         extra_plugins: |
           @semantic-release/changelog
@@ -33,11 +33,11 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Create UPM branch
       run: |
-        echo '### Removing exsiting upm branch'
-        git branch -d upm &> /dev/null || echo upm branch not found
+        # echo '### Removing existing upm branch for the version'
+        # git branch -d $UPM_BRANCH &> /dev/null || echo upm branch not found
 
         echo '### Split upm branch'
-        git subtree split -P "$PKG_ROOT" -b upm
+        git subtree split -P "$PKG_ROOT" -b $UPM_BRANCH
 
         echo '### checkout to upm to manage Samples and other'
         git checkout upm
@@ -52,9 +52,11 @@ jobs:
         fi
 
         echo '### Pushing new changes to Upm Branch.'
-        git push -f -u origin upm
+        git push -f -u origin $UPM_BRANCH
       env:
-        PKG_ROOT: Packages/com.iPAHeartBeat.Core.Extensions
+        PKG_ROOT: Unity/Packages/com.iPAHeartBeat.Core.Extensions
+        VERSION: v${{ steps.semantic.outputs.new_release_version }}
+        UPM_BRANCH: upm/$VERSION
     - name: Create upm git tag
       if: steps.semantic.outputs.new_release_published == 'true'
       run: |
