@@ -33,7 +33,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Create UPM branch
       run: |
-        # echo '### Removing exsiting upm branch for the version'
+        # echo '### Removing existing upm branch for the version'
         # git branch -d $UPM_BRANCH &> /dev/null || echo upm branch not found
 
         echo '### Split upm branch'
