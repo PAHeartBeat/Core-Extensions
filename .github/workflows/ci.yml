@@ -32,6 +32,9 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Create UPM branch
+      env:
+        PKG_ROOT: Unity/Packages/com.iPAHeartBeat.Core.Extensions
+        UPM_BRANCH: upm/v${{ steps.semantic.outputs.new_release_version }}
       run: |
         echo '### Removing existing upm branch for the version'
         git branch -d $UPM_BRANCH &> /dev/null || echo upm branch not found
@@ -53,13 +56,10 @@ jobs:
 
         echo '### Pushing new changes to Upm Branch.'
         git push -f -u origin $UPM_BRANCH
-      env:
-        PKG_ROOT: Unity/Packages/com.iPAHeartBeat.Core.Extensions
-        UPM_BRANCH: upm/v${{ steps.semantic.outputs.new_release_version }}
     - name: Create upm git tag
+      env:
+        TAG: upm/v${{ steps.semantic.outputs.new_release_version }}
       if: steps.semantic.outputs.new_release_published == 'true'
       run: |
         git tag $TAG $UPM_BRANCH
         git push origin --tags
-      env:
-        TAG: upm/v${{ steps.semantic.outputs.new_release_version }}
