@@ -1,3 +1,17 @@
+# 1.0.0 (2022-10-13)
+
+
+### Bug Fixes
+
+* Branch name in git tag fix ([7f625f6](https://github.com/PAHeartBeat/iPAHearbeat-Core-Extensions/commit/7f625f68e37b7d41ef6357c9753d3aecc86939d9))
+* upm barnch name was wrong in CI CD. ([6f0060b](https://github.com/PAHeartBeat/iPAHearbeat-Core-Extensions/commit/6f0060bb1c0a43dfc8b03b56bfdf43eefe79fa1f))
+
+
+### Features
+
+* Added extension ([5227c02](https://github.com/PAHeartBeat/iPAHearbeat-Core-Extensions/commit/5227c025a1daea38edca694e2d6c4b03817841cb))
+* No New Feature ([a7fd3f5](https://github.com/PAHeartBeat/iPAHearbeat-Core-Extensions/commit/a7fd3f58018b02221b674425fac0b87e64652b32))
+
 ## [1.0.2](https://github.com/PAHeartBeat/iPAHearbeat-Core-Extensions/compare/v1.0.0...v1.0.1) (2022-10-13)
 
 ### Bug Fixes
