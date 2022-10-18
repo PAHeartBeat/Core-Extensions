@@ -62,7 +62,7 @@
 
   <PropertyGroup Label="Project Git Info">
     <PackageProjectUrl/>
-    <RepositoryUrl>https://github.com/PAHeartBeat/iPAHearbeat-Core-Extensions</RepositoryUrl>
+    <RepositoryUrl>https://github.com/PAHeartBeat/Core-Extensions</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
