@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/PAHeartBeat/Core-Extensions/compare/v1.0.0...v1.0.1) (2022-10-18)
+
+
+### Bug Fixes
+
+* Added mising root gitignore file ([aa2948c](https://github.com/PAHeartBeat/Core-Extensions/commit/aa2948c162e738fa3cb48ba1f94f6c3b8ff0f3b8))
+* codeQL changed to run only on Develop ([d25fc00](https://github.com/PAHeartBeat/Core-Extensions/commit/d25fc0061eb0f966602b730ca14a9622194396cb))
+
 ## [1.0.2](https://github.com/PAHeartBeat/iPAHearbeat-Core-Extensions/compare/v1.0.0...v1.0.1) (2022-10-13)
 
 ### Bug Fixes
