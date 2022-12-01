@@ -1,6 +1,6 @@
 {
 	"name": "com.ipaheartbeat.core.extensions",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"displayName": "Core Extensions",
 	"description": "This Packages contains various extensions for c# code to use with any Project Unity Or Non-Unity.\nUses NewtonSoft Json v13.0.1 Package for json related operation. Which is compatible with unity package \"com.unity.nuget.newtonsoft-json\" with version 3.0.1 or higher",
 	"license": "LGPL-3.0-or-later",
@@ -25,7 +25,7 @@
 		"url": "https://github.com/PAHeartBeat/Core-Extensions"
 	},
 	"bugs": {
-		"url": "https://github.com/PAHeartBeat/iPAHearbeat-Core-Extensions/issues",
+		"url": "https://github.com/PAHeartBeat/Core-Extensions/issues",
 		"email": "ankur30884@gmail.com"
 	},
 	"type": "library"

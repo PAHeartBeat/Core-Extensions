@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net48;net5.0;net6.0</TargetFrameworks>
+    <TargetFrameworks>net48;net5.0;net6.0;net7.0</TargetFrameworks>
     <LangVersion>10</LangVersion>
     <OutputType>library</OutputType>
   </PropertyGroup>
@@ -26,8 +26,11 @@
 
   <PropertyGroup Label="NuGet Pacakge Settings">
     <IsPackable>true</IsPackable>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageVersion>1.0.2</PackageVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Debug and Exception Setting">
@@ -41,19 +44,19 @@
 
   <PropertyGroup Label="Author and Copyright">
     <Authors>Ankur Ranpariya</Authors>
-    <Company>N/A</Company>
     <Copyright>@2021</Copyright>
   </PropertyGroup>
 
   <PropertyGroup Label="Project Meta and settings.">
     <Product>C# Extenstion for Unity using .Net Framework 4.8</Product>
     <PackageId>iPAHeartBeat.Core.Extensions</PackageId>
-    <PackageTags>C#, NewtonSoft Json</PackageTags>
+    <PackageTags>C#, NewtonSoft Json, Extensions, DateTime, Json, Enum, String, TimeSpan.</PackageTags>
+    <Description>This Package is created to provide basic extension methods for various data type like Daet Time, string, Enum, Json Object, TimeSpan, string.</Description>
 
     <RootNamespace>iPAHeartBeat.Core</RootNamespace>
     <AssemblyName>$(PackageId)-$(TargetFramework)</AssemblyName>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
     <NeutralLanguage>en</NeutralLanguage>
 
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -77,6 +80,11 @@
 
   <ItemGroup>
     <AdditionalFiles Include="stylecop.json"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE.md" Pack="true" PackagePath=""/>
+    <None Include="README.md" Pack="true" PackagePath=""/>
   </ItemGroup>
 
   <ItemGroup>

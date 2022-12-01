@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/PAHeartBeat/Core-Extensions/compare/v1.0.1...v1.0.2) (2022-10-18)
+
+
+### Bug Fixes
+
+* update package json file as per updated repo url ([820e0c2](https://github.com/PAHeartBeat/Core-Extensions/commit/820e0c238baf738de310de8c224ccc53b0c4a0b1))
+
 ## 1.0.1 (2022-09-27)
 
 ### Minor Changes
