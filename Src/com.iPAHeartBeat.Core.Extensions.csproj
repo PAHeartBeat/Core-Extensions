@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net48;net5.0;net6.0;net7.0</TargetFrameworks>
+    <TargetFrameworks>net471;net48;net6.0;net7.0</TargetFrameworks>
     <LangVersion>10</LangVersion>
     <OutputType>library</OutputType>
   </PropertyGroup>
@@ -30,7 +30,7 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageVersion>1.0.2</PackageVersion>
+    <PackageVersion>2.0.0</PackageVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Debug and Exception Setting">
@@ -51,12 +51,12 @@
     <Product>C# Extenstion for Unity using .Net Framework 4.8</Product>
     <PackageId>iPAHeartBeat.Core.Extensions</PackageId>
     <PackageTags>C#, NewtonSoft Json, Extensions, DateTime, Json, Enum, String, TimeSpan.</PackageTags>
-    <Description>This Package is created to provide basic extension methods for various data type like Daet Time, string, Enum, Json Object, TimeSpan, string.</Description>
+    <Description>This Package is created to provide basic extension methods for various data type like Date Time, string, Enum, Json Object, TimeSpan, string.</Description>
 
     <RootNamespace>iPAHeartBeat.Core</RootNamespace>
     <AssemblyName>$(PackageId)-$(TargetFramework)</AssemblyName>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
-    <FileVersion>1.0.2.0</FileVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
     <NeutralLanguage>en</NeutralLanguage>
 
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
