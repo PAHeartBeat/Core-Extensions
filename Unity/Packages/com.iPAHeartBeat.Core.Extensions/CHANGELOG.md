@@ -1,4 +1,4 @@
-## v1.0.3 (2022.12.07)
+## v2.0.0 (2022.12.07)
 ### Changes
 - Added Multiline comments in code for Partial Open Source Info.
 - Added Support for .Net 4.7.1 for Unity package as Unity Officially support .Net 4.7.1
