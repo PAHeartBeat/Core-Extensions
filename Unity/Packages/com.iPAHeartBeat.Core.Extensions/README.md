@@ -1,11 +1,11 @@
-# iPAHeartbeat-Core-Extensions
+# iPAHeartbeat-Core-Singleton
 This Package is created to provide basic extension methods for various data type like Date Time, string, Enum, Json Object, TimeSpan, string.
 
 * [Change Log](CHANGELOG.md)
-* [UPM Package License](LICENCE.md)
+* [License](LICENCE.md)
 
 ## Unity Package
-Unity Package is based on .Net Framework 4.8 and C# 10.
+Unity Package is based on .Net Framework 4.71 and C# 10.
 
 Note:
 - Recently I have configure Unity Packages to Cloud Smith IO. Now any-one can use this package to their unity project
@@ -46,11 +46,3 @@ Add this information to you Unity manifest.json file. There is two way to setup 
 8. Now you are ready to use the packages created by Me.
 
 Once you have setup the registry in unity project you can find the packages in Unity Package manger, from "My Registry" option.
-
-## C# Project
-The main C# project used multiple target framework like .NetFramework 4.8, .NET 5.0, .NET 6.0
-
-## NuGet Package.
-I have also deployed NuGet packages to Nuget.org so same system you can use for Non-Unity .NET Projects. NuGet package are supported for multiple .NET Framework.
-## Issues
-Please report issue or feature request in Issue section of repo in github. I will try fix issues ASAP and feature request I can't say now, but Post there so I can track.
