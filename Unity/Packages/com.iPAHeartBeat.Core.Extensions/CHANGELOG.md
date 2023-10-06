@@ -1,3 +1,7 @@
+## v2.0.1 (2023.10.06)
+### Changes
+- Minor fixing done for GetTicking Time to show separator for mode's all result
+
 ## v2.0.0 (2022.12.07)
 ### Changes
 - Added Multiline comments in code for Partial Open Source Info.
