@@ -352,10 +352,10 @@
             10D 2:10:22 or 23:5:10 or 10:5.
             </summary>
         </member>
-        <member name="F:iPAHeartBeat.Core.Extensions.TimeMode.Minimal">
+        <member name="F:iPAHeartBeat.Core.Extensions.TimeMode.Full">
             <summary>
             This option will provide format like...
-            10D 2H or 23H 5M or 10M 5S.
+            10 Day 03 Hour 05 Min 20 Sec or 12 Hour 25 Min 00 Sec or 05 Min 00 Sec.
             </summary>
         </member>
         <member name="F:iPAHeartBeat.Core.Extensions.TimeMode.Compact">
@@ -364,10 +364,16 @@
             09D 05H or 23H:05M or 10M:05S.
             </summary>
         </member>
-        <member name="F:iPAHeartBeat.Core.Extensions.TimeMode.Full">
+        <member name="F:iPAHeartBeat.Core.Extensions.TimeMode.Minimal">
             <summary>
             This option will provide format like...
-            10 Day 03 Hour 05 Min 20 Sec or 12 Hour 25 Min 00 Sec or 05 Min 00 Sec.
+            10D 2H or 23H 5M or 10M 5S.
+            </summary>
+        </member>
+        <member name="F:iPAHeartBeat.Core.Extensions.TimeMode.MinimalCaps">
+            <summary>
+            This option will provide format like...
+            10D 2H or 23H 5M or 10M 5S.
             </summary>
         </member>
         <member name="T:iPAHeartBeat.Core.Extensions.TimeSpanExtensions">

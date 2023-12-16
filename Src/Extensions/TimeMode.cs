@@ -52,9 +52,9 @@ public enum TimeMode {
 
 	/// <summary>
 	/// This option will provide format like...
-	/// 10D 2H or 23H 5M or 10M 5S.
+	/// 10 Day 03 Hour 05 Min 20 Sec or 12 Hour 25 Min 00 Sec or 05 Min 00 Sec.
 	/// </summary>
-	Minimal = 1,
+	Full = 1,
 
 	/// <summary>
 	/// This option will provide format like...
@@ -64,7 +64,13 @@ public enum TimeMode {
 
 	/// <summary>
 	/// This option will provide format like...
-	/// 10 Day 03 Hour 05 Min 20 Sec or 12 Hour 25 Min 00 Sec or 05 Min 00 Sec.
+	/// 10D 2H or 23H 5M or 10M 5S.
 	/// </summary>
-	Full = 3,
+	Minimal = 3,
+
+	/// <summary>
+	/// This option will provide format like...
+	/// 10D 2H or 23H 5M or 10M 5S.
+	/// </summary>
+	MinimalCaps = 4,
 }

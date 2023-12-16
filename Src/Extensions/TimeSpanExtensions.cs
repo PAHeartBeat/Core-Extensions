@@ -70,8 +70,11 @@ public static class TimeSpanExtensions {
 		string format;
 		format = mode switch {
 			TimeMode.Minimal => span.TotalDays.CheckAndReturnFormatOrRecheck(
+				"{0:%d}d:{0:%h}h",
+				() => span.TotalHours.CheckReturnAnyFormat("{0:%h}h:{0:%m}m", "{0:%m}m:{0:%s}s")),
+			TimeMode.MinimalCaps => span.TotalDays.CheckAndReturnFormatOrRecheck(
 				"{0:%d}D:{0:%h}H",
-				() => span.TotalHours.CheckReturnAnyFormat("{0:%h}H:{0:%m}M", "{0:%m}M:{0:%s}S")),
+				() => span.TotalHours.CheckReturnAnyFormat("{0:%h}h:{0:%m}M", "{0:%m}M:{0:%s}S")),
 			TimeMode.Compact => span.TotalDays.CheckAndReturnFormatOrRecheck(
 				"{0:dd}D:{0:hh}H",
 				() => span.TotalHours.CheckReturnAnyFormat("{0:hh}H:{0:mm}M", "{0:mm}M:{0:ss}S")),

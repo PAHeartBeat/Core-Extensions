@@ -1,3 +1,9 @@
+## v2.0.2 (2023.12.16)
+### Changes
+- Added new Ticker option Minimal Caps.
+- enum value changed.
+- GetEpoch and GetDateFromEpoch changed with UTC Date Time for convert.
+
 ## v2.0.1 (2023.10.06)
 ### Changes
 - Minor fixing done for GetTicking Time to show separator for mode's all result

@@ -93,7 +93,7 @@ public static class DateTimeExtensions {
 	/// <param name="date">Date which you need to convert in UTC format.</param>
 	/// <returns>return total seconds as unix time format.</returns>
 	public static long GetEpochTime(this DateTime date) {
-		var timeSpan = date - new DateTime(1970, 1, 1, 0, 0, 0, 0);
+		var timeSpan = date - new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
 		return (long)timeSpan.TotalSeconds;
 	}
 
@@ -103,7 +103,7 @@ public static class DateTimeExtensions {
 	/// <param name="unixEpochSeconds">epoch time value in seconds.</param>
 	/// <returns>return C# date-time object.</returns>
 	public static DateTime GetDateFromEpoch(this long unixEpochSeconds) {
-		var dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+		var dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
 		dateTime = dateTime.AddSeconds(unixEpochSeconds);
 		return dateTime;
 	}
